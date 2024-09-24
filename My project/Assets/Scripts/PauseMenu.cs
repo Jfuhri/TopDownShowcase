@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,20 +14,37 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //IF the escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
+        // if you press the escape key
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //display the pause menu
-            GetComponent<Canvas>().enabled = true;
-            //pause the game
-            Time.timeScale = 0;
+            if (Time.timeScale == 1)
+            {
+                //Make the pause menu visible
+                GetComponent<Canvas>().enabled = true;
+                //also, stop the gmae from playing
+                Time.timeScale = 0;
+            }
+            else
+            {
+               Resume();
+            }
+
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0)
-        {
-            //hide the pause canvas again
-            GetComponent <Canvas>().enabled = false;
-            //reset the time scale to 1
-            Time.timeScale = 1;
-        }
+    }
+    public void Resume()
+    {
+        GetComponent<Canvas>().enabled = false;
+        //rest the time scale
+        Time.timeScale = 1;
+    }
+
+    public void Retry()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
