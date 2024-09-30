@@ -164,6 +164,9 @@ GameObject:
   - component: {fileID: 9181308116448213774}
   - component: {fileID: 8742616690005025456}
   - component: {fileID: 909599021577537515}
+  - component: {fileID: -2542221911500030997}
+  - component: {fileID: 5821619299753409253}
+  - component: {fileID: -1178613599827596046}
   m_Layer: 0
   m_Name: PlaugeDoctor
   m_TagString: Enemy
@@ -308,12 +311,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5164647036682474603}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e0b6d5920267c346acd3c62f60372d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 5
+  chaseSpeed: 3
   chaseTirggerDistance: 5
   returnHome: 1
 --- !u!114 &909599021577537515
@@ -333,6 +336,52 @@ MonoBehaviour:
   bulletLifetime: 2
   shootDelay: 1
   shootRange: 5
+--- !u!114 &-2542221911500030997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164647036682474603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fcb1c0598af34b4cbcaddda43aa0e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+--- !u!114 &5821619299753409253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164647036682474603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62ffdcacb5e3ff47b12d5f52408f7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &-1178613599827596046
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164647036682474603}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2c4199e6e79aab4aaa6ed16a975fc9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8087657042612596399
 GameObject:
   m_ObjectHideFlags: 0
